@@ -1,0 +1,7 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.relative:hover .tooltip {
+    opacity: 1; /* Show the tooltip */
+  }
