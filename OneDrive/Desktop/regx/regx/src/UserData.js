@@ -99,8 +99,8 @@ const UserData = () => {
       </div>
       <table className="w-full table-auto border-collapse">
         <thead>
-          <tr className="bg-gray-200">
-            <th className="border px-4 py-2">Name</th>
+          <tr className="bg-gray-200 text-left">
+            <th className="border  px-4 py-2">Name</th>
             <th className="border px-4 py-2">Email</th>
             <th className="border px-4 py-2">Phone</th>
             <th className="border px-4 py-2">Company</th>
