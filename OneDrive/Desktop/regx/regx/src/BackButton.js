@@ -12,7 +12,7 @@ const BackButton = () => {
   return (
     <button
       onClick={handleBack}
-      className="flex items-center space-x-2 px-5 py-2  text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition duration-200 ease-in-out"
+      className="flex items-center fixed top-1 left-1 mb-10 space-x-2 px-5 py-2  text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition duration-200 ease-in-out"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

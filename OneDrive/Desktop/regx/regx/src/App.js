@@ -30,7 +30,7 @@ const App = () => {
     <ToastContainer />
     
       <Routes>
-        {/* Public route: Login */}
+        
         <Route
           path="/login"
           element={isAuthenticated ? <Navigate to="/home" /> : <LoginForm onLogin={handleLogin} />}
@@ -39,7 +39,7 @@ const App = () => {
        
 
 
-        {/* Protected routes within Layout */}
+        
         <Route element={<Layout isAuthenticated={isAuthenticated} onLogout={handleLogout} />}>
 
           <Route
@@ -56,7 +56,7 @@ const App = () => {
           />
         </Route>
 
-        {/* Redirect to login if no matching route */}
+        
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
       </>

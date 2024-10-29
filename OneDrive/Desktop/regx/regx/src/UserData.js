@@ -75,9 +75,10 @@ const UserData = () => {
     <>
       <BackButton />
 
-    <div className="p-0">
-      <div className="  mb-2">
-        <h1 className="text-2xl font-bold">User Data</h1>
+    <div className="py-7">
+    <h1 className="text-2xl font-bold mr-10 text-center">User Data</h1>
+
+      <div className="  mb-2 flex justify-self-center items-center">
         
         <button
           onClick={() => setIsModalOpen(true)}
@@ -87,7 +88,7 @@ const UserData = () => {
         </button>
         
       </div>
-
+      <div className='flex justify-center'>
       <input
         type="text"
         placeholder="Search by name or email"
@@ -95,7 +96,7 @@ const UserData = () => {
         onChange={handleSearch}
         className="border p-2 rounded mb-4 w-1/2 outline-none"
       />
-
+      </div>
       <table className="w-full table-auto border-collapse">
         <thead>
           <tr className="bg-gray-200">
