@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Modal from './Modal';
+import BackButton from './BackButton';
 
 const UserData = () => {
   const [users, setUsers] = useState([]);
@@ -71,13 +72,16 @@ const UserData = () => {
   };
 
   return (
-    <div className="p-4">
-      <div className="  mb-4">
+    <>
+      <BackButton />
+
+    <div className="p-0">
+      <div className="  mb-2">
         <h1 className="text-2xl font-bold">User Data</h1>
         
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-500 text-white my-4 px-4 py-2 rounded-md mr-10"
+          className="bg-blue-500 text-white my-2 px-4 py-2 rounded-md mr-10"
         >
           Add User
         </button>
@@ -143,6 +147,7 @@ const UserData = () => {
         />
       )}
     </div>
+    </>
   );
 };
 

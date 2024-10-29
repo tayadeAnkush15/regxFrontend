@@ -1,6 +1,7 @@
 // HomePage.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import BackButton from './BackButton';
 
 const HomePage = ({ userName, onLogout, isAuthenticated }) => {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ const HomePage = ({ userName, onLogout, isAuthenticated }) => {
   };
 
   return (
+    <>
+    <BackButton />
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <h2 className="text-3xl font-bold mb-4">Welcome, {userName}</h2>
       <div className="space-y-4">
@@ -35,6 +38,7 @@ const HomePage = ({ userName, onLogout, isAuthenticated }) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 
 import { Outlet, useNavigate } from 'react-router-dom';
+import BackButton from './BackButton';
 
 
 const Settings = ({ isAuthenticated, onLogout }) => {
@@ -22,6 +23,8 @@ const Settings = ({ isAuthenticated, onLogout }) => {
   };
 
   return (
+    <>
+    <BackButton />
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <h2 className="text-2xl font-bold mb-6">Settings</h2>
       
@@ -34,6 +37,7 @@ const Settings = ({ isAuthenticated, onLogout }) => {
       <Outlet /> 
 
     </div>
+    </>
   );
 };
 
