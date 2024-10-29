@@ -1,15 +1,24 @@
 // Settings.js
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+
+import { Outlet, useNavigate } from 'react-router-dom';
+
 
 const Settings = ({ isAuthenticated, onLogout }) => {
   const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/login');  
+      
+      
+      return;
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleLogout = () => {
-    if (!isAuthenticated) {
-        navigate('/login');  
-        
-      }
+    onLogout();  
+    navigate('/login');
+    
   };
 
   return (
@@ -22,6 +31,8 @@ const Settings = ({ isAuthenticated, onLogout }) => {
       >
         Logout
       </button>
+      <Outlet /> 
+
     </div>
   );
 };

@@ -25,6 +25,7 @@ const App = () => {
 
   return (
     <>
+    
     <ToastContainer />
       <Routes>
         {/* Public route: Login */}
@@ -32,9 +33,13 @@ const App = () => {
           path="/login"
           element={isAuthenticated ? <Navigate to="/home" /> : <LoginForm onLogin={handleLogin} />}
         />
+       
+       
+
 
         {/* Protected routes within Layout */}
         <Route element={<Layout isAuthenticated={isAuthenticated} onLogout={handleLogout} />}>
+
           <Route
             path="/home"
             element={isAuthenticated ? <HomePage userName={userName} /> : <Navigate to="/login" />}
@@ -45,7 +50,7 @@ const App = () => {
           />
           <Route
             path="/settings"
-            element={isAuthenticated ? <Settings /> : <Navigate to="/login" />}
+            element={isAuthenticated ? <Settings onLogout={handleLogout} /> : <Navigate to="/login" />}
           />
         </Route>
 

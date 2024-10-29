@@ -10,6 +10,8 @@ const Layout = ({ isAuthenticated, onLogout }) => {
   useEffect(() => {
     if (!isAuthenticated) {
       navigate('/login');  
+      
+      
       return;
     }
 
@@ -46,6 +48,7 @@ const Layout = ({ isAuthenticated, onLogout }) => {
   const handleLogout = () => {
     onLogout();  
     navigate('/login');
+    console.log("logggggg");
   };
 
   return (
